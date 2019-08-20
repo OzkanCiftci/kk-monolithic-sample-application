@@ -1,8 +1,9 @@
 package com.tech.kk.monolithic.security;
 
-import com.tech.kk.monolithic.KkmonolithicApp;
-import com.tech.kk.monolithic.domain.User;
-import com.tech.kk.monolithic.repository.UserRepository;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
+
+import java.util.Locale;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.BeforeEach;
@@ -11,13 +12,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Locale;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
+import com.tech.kk.monolithic.KkmonolithicApp;
+import com.tech.kk.monolithic.domain.User;
+import com.tech.kk.monolithic.repository.UserRepository;
 
 /**
  * Integrations tests for {@link DomainUserDetailsService}.
